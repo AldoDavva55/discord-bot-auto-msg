@@ -10,14 +10,14 @@ load_dotenv()
 TOKEN      = os.getenv("TOKEN")
 CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 
-MESSAGE = "Pesan otomatis 10 detik sekali ⏰"
+MESSAGE = ":gtmega: CHEAP :BGL:  SSP SHOP AT :Arrow:  MAUBIJI :Verified: "
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f"[{datetime.utcnow()}] Bot masuk sebagai {self.user}")
         self.auto_msg.start()
 
-    @tasks.loop(seconds=10)
+    @tasks.loop(minutes=375)
     async def auto_msg(self):
         ch = self.get_channel(CHANNEL_ID)
         if ch:
@@ -33,4 +33,5 @@ print("=== DEBUG ENV ===")
 print("DISCORD_TOKEN:", repr(TOKEN))
 print("CHANNEL_ID :", repr(CHANNEL_ID))
 print("=================")
+print("DONT CLOSE!!!")
 client.run(TOKEN)
