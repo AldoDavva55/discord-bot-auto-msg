@@ -29,4 +29,8 @@ class MyClient(discord.Client):
         await self.wait_until_ready()
 
 client = MyClient()
+print("=== DEBUG ENV ===")
+print("DISCORD_TOKEN:", repr(TOKEN))
+print("CHANNEL_ID :", repr(CHANNEL_ID))
+print("=================")
 client.run(TOKEN)
