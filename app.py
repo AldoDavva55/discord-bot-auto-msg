@@ -10,7 +10,7 @@ load_dotenv()
 TOKEN      = os.getenv("TOKEN")
 CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 
-MESSAGE = ":gtmega: CHEAP :BGL:  SSP SHOP AT :Arrow:  MAUBIJI :Verified: "
+MESSAGE = "Cheap SSP Shop At MAUBIJI"
 
 class MyClient(discord.Client):
     async def on_ready(self):
